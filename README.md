@@ -1,7 +1,7 @@
 # Replicazeron WebHID Control Deck
 
 A standalone browser configurator and firmware updater for
-[Qwuille's Replicazeron Vial/QMK firmware](https://github.com/qwuille/vial-qmk/tree/replicazeron).
+[Qwuille's Replicazeron Vial/QMK firmware](https://github.com/qwuille/vial-qmk/tree/vial).
 
 The application is a self-contained static page. It communicates directly with
 the controller through WebHID and with its STM32duino bootloader through
