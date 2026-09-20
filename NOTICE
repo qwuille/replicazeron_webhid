@@ -1,8 +1,8 @@
 Replicazeron WebHID Control Deck
-Copyright (c) 2026 Kristian Ljungkvist (Qwuille)
+Copyright (c) 2026 Replicazeron contributors
 https://github.com/qwuille/replicazeron_webhid
 
-This standalone WebHID/WebUSB interface is maintained by Qwuille for Qwuille's
+This standalone WebHID/WebUSB interface is maintained for the
 Replicazeron Vial/QMK firmware.
 
 The compatible firmware follows earlier Replicazeron firmware work by 9R and

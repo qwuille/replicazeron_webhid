@@ -3,7 +3,7 @@
   "$id": "https://qwuille.github.io/replicazeron_webhid/profiles/profile.schema.json",
   "title": "Replicazeron layout profile",
   "type": "object",
-  "required": ["format", "version", "name", "title", "joystickMode", "keycodes"],
+  "required": ["format", "version", "name", "title", "author", "description", "joystickMode", "keycodes"],
   "properties": {
     "format": { "const": "replicazeron-layout-profile" },
     "version": { "const": 1 },
@@ -13,6 +13,7 @@
     "game": { "type": "string" },
     "platform": { "type": "string" },
     "description": { "type": "string" },
+    "systemLayer": { "type": "boolean", "description": "True for an exported Settings tool-layer profile." },
     "joystickMode": { "type": "integer", "minimum": 0, "maximum": 2 },
     "keycodes": {
       "type": "array",

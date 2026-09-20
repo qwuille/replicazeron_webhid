@@ -51,10 +51,34 @@ non-responsive or incompatible device.
 | 10 | Side indicators get | Reply uses the side-indicator layout below |
 | 11 | Side indicators set | Request uses the side-indicator layout below |
 | 12 | Bootloader request | Guarded reset request described below |
+| 13 | Macro metadata get | Index in byte 2; reply bytes 3-15 contain the name, bytes 16-19 timing, and byte 31 marker `A6` |
+| 14 | Macro metadata set | Index in byte 2; bytes 3-15 contain the name and bytes 16-19 contain timing |
+| 15 | Macro buffer chunk set | Offset in bytes 3-4, length in byte 5, up to 26 data bytes from byte 6 |
+| 16 | Configuration heartbeat | Keeps configuration priority active; reply byte 3 is `1` |
+| 17 | Settings-stick mode get | Reply byte 3 contains the Settings-layer scroll/CAD mode |
+| 18 | Settings-stick mode set | Request byte 3 contains the Settings-layer scroll/CAD mode |
 
 Joystick mode values are `0 = Joystick`, `1 = WASD`, and
 `2 = WASD + Shift`. Layout 10 is the fixed Settings layer and does not have an
 editable title or joystick mode.
+
+Settings-stick values are `0 = page scroll with a runtime cursor toggle`,
+`1 = middle-button drag`, `2 = Shift + middle-button drag`, and
+`3 = right-button drag`. Stick strength controls scroll rate or cursor speed.
+The latter three provide common CAD pan/orbit behaviors while the stick is
+displaced.
+
+## Vial/OpenRGB arbitration
+
+Configuration commands receive temporary priority over VialRGB lighting
+traffic. While Vial is reading or changing mappings, or while WebHID maintains
+operation 16 every two seconds, the firmware ignores VialRGB lighting packets
+and sends no reply to them. The last OpenRGB colors remain visible. Lighting
+communication resumes five seconds after configuration traffic stops.
+
+The initial Vial identity query remains available so OpenRGB can discover the
+device. Because both applications still share one Raw HID interface, this is
+traffic arbitration rather than true host-application detection.
 
 ## RGB settings payload
 
@@ -116,4 +140,23 @@ slot's existing value at that position.
 
 WebHID snapshots the destination slot before installation, writes and reads
 back all profile fields, and restores the snapshot if installation or
-verification fails. The fixed Settings layer is never a valid destination.
+verification fails. Settings is also a valid destination, but its OLED D-pad
+positions and physical layout-selector key are always preserved.
+
+Layout numbering is zero-based and matches QMK/Vial: playable layouts are
+`0-9`, followed by the fixed Settings layer at `10`.
+
+## Macro profile files
+
+The firmware exposes 16 macros numbered `0-15`. Their contents retain Vial's
+standard NUL-separated dynamic-macro encoding. The custom protocol stores each
+13-byte display name and an optional automatic post-action delay range. A
+minimum and maximum of zero disables the automatic gap; equal nonzero values
+produce a fixed gap; differing values choose a new pseudo-random delay for
+every key action. Because timing is separate from the sequence, Vial can still
+read and edit all standard tap, down, up, text, and explicit-delay actions.
+
+A version-1 macro profile contains the name, nonzero macro-byte array, and its
+automatic timing object. WebHID reconstructs the shared macro buffer, verifies
+the chosen destination, and restores the old buffer, name, and timing if the
+installation fails.

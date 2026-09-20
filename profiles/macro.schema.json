@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qwuille.github.io/replicazeron_webhid/profiles/macro.schema.json",
+  "title": "Replicazeron macro profile",
+  "type": "object",
+  "required": ["format", "version", "name", "author", "description", "bytes"],
+  "properties": {
+    "format": { "const": "replicazeron-macro-profile" },
+    "version": { "const": 1 },
+    "name": { "type": "string", "minLength": 1, "pattern": "^[ -~]+$" },
+    "author": { "type": "string" },
+    "game": { "type": "string" },
+    "platform": { "type": "string" },
+    "description": { "type": "string" },
+    "autoDelay": {
+      "type": "object",
+      "required": ["enabled", "minimum", "maximum"],
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "minimum": { "type": "integer", "minimum": 0, "maximum": 60000 },
+        "maximum": { "type": "integer", "minimum": 0, "maximum": 60000 }
+      },
+      "additionalProperties": false
+    },
+    "bytes": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          { "type": "string", "pattern": "^0x[0-9A-Fa-f]{1,2}$" },
+          { "type": "integer", "minimum": 1, "maximum": 255 }
+        ]
+      }
+    }
+  },
+  "additionalProperties": true
+}

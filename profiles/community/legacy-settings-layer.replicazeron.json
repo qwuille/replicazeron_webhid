@@ -1,0 +1,18 @@
+{
+  "format": "replicazeron-layout-profile",
+  "version": 1,
+  "name": "Legacy Settings layer",
+  "title": "Settings",
+  "author": "Replicazeron contributors",
+  "description": "Restores the original RGB and controller shortcuts where safe. Firmware-owned OLED navigation, layout selection, and bootloader positions are preserved.",
+  "systemLayer": true,
+  "joystickMode": 0,
+  "keycodes": [
+    "0x782B", "0x782C", "0x7830", "0x7833", null,
+    "0x0000", "0x7825", "0x7827", "0x7823", null,
+    "0x7820", "0x0000", "0x0000", "0x0000", null,
+    "0x0000", "0x7826", "0x7828", "0x7824", null,
+    null, "0x7E41", "0x7E42", "0x0019", null,
+    "0x7821", null, "0x0000", "0x7822", "0x0013"
+  ]
+}

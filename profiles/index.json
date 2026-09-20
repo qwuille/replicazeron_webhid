@@ -1,5 +1,1103 @@
 {
   "format": "replicazeron-profile-catalog",
   "version": 1,
-  "profiles": []
+  "profiles": [
+    {
+      "name": "Legacy Settings layer",
+      "type": "layout",
+      "author": "Replicazeron contributors",
+      "description": "Restore the original Settings-layer RGB and controller shortcuts while preserving protected firmware controls.",
+      "file": "community/legacy-settings-layer.replicazeron.json"
+    },
+    {
+      "name": "Call In Super Destroyer",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Common",
+      "author": "Helldivers 2 community data",
+      "description": "Common stratagem. Sends W W S S A D A D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/call-in-super-destroyer.replicazeron.json"
+    },
+    {
+      "name": "Eagle Rearm",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Common",
+      "author": "Helldivers 2 community data",
+      "description": "Common stratagem. Sends W W A W D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/eagle-rearm.replicazeron.json"
+    },
+    {
+      "name": "Reinforce",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Common",
+      "author": "Helldivers 2 community data",
+      "description": "Common stratagem. Sends W S D A W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/reinforce.replicazeron.json"
+    },
+    {
+      "name": "Resupply",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Common",
+      "author": "Helldivers 2 community data",
+      "description": "Common stratagem. Sends S S W D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/resupply.replicazeron.json"
+    },
+    {
+      "name": "SOS Beacon",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Common",
+      "author": "Helldivers 2 community data",
+      "description": "Common stratagem. Sends W S D W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/sos-beacon.replicazeron.json"
+    },
+    {
+      "name": "Cargo Container",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Objectives",
+      "author": "Helldivers 2 community data",
+      "description": "Objectives stratagem. Sends W W S S D S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/cargo-container.replicazeron.json"
+    },
+    {
+      "name": "Dark Fluid Vessel",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Objectives",
+      "author": "Helldivers 2 community data",
+      "description": "Objectives stratagem. Sends W A D S W W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/dark-fluid-vessel.replicazeron.json"
+    },
+    {
+      "name": "Hellbomb",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Objectives",
+      "author": "Helldivers 2 community data",
+      "description": "Objectives stratagem. Sends S W A S W D S W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/hellbomb.replicazeron.json"
+    },
+    {
+      "name": "Hive Breaker Drill",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Objectives",
+      "author": "Helldivers 2 community data",
+      "description": "Objectives stratagem. Sends A W S D S S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/hive-breaker-drill.replicazeron.json"
+    },
+    {
+      "name": "Illumination Flare",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Objectives",
+      "author": "Helldivers 2 community data",
+      "description": "Objectives stratagem. Sends D D D A A A as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/illumination-flare.replicazeron.json"
+    },
+    {
+      "name": "Prospecting Drill",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Objectives",
+      "author": "Helldivers 2 community data",
+      "description": "Objectives stratagem. Sends S S A D S S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/prospecting-drill.replicazeron.json"
+    },
+    {
+      "name": "SE-45 Seismic Probe",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Objectives",
+      "author": "Helldivers 2 community data",
+      "description": "Objectives stratagem. Sends W W A D S S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/se-45-seismic-probe.replicazeron.json"
+    },
+    {
+      "name": "SEAF Artillery",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Objectives",
+      "author": "Helldivers 2 community data",
+      "description": "Objectives stratagem. Sends D W W S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/seaf-artillery.replicazeron.json"
+    },
+    {
+      "name": "SSSD Delivery",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Objectives",
+      "author": "Helldivers 2 community data",
+      "description": "Objectives stratagem. Sends S S S W W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/sssd-delivery.replicazeron.json"
+    },
+    {
+      "name": "Super Earth Flag",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Objectives",
+      "author": "Helldivers 2 community data",
+      "description": "Objectives stratagem. Sends S W S W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/super-earth-flag.replicazeron.json"
+    },
+    {
+      "name": "Tectonic Drill",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Objectives",
+      "author": "Helldivers 2 community data",
+      "description": "Objectives stratagem. Sends W S W S W S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/tectonic-drill.replicazeron.json"
+    },
+    {
+      "name": "Upload Data",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Objectives",
+      "author": "Helldivers 2 community data",
+      "description": "Objectives stratagem. Sends A D W W W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/upload-data.replicazeron.json"
+    },
+    {
+      "name": "Eagle 110mm Rocket Pods",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Offensive",
+      "author": "Helldivers 2 community data",
+      "description": "Offensive stratagem. Sends W D W A as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/eagle-110mm-rocket-pods.replicazeron.json"
+    },
+    {
+      "name": "Eagle 500kg Bomb",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Offensive",
+      "author": "Helldivers 2 community data",
+      "description": "Offensive stratagem. Sends W D S S S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/eagle-500kg-bomb.replicazeron.json"
+    },
+    {
+      "name": "Eagle Airstrike",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Offensive",
+      "author": "Helldivers 2 community data",
+      "description": "Offensive stratagem. Sends W D S D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/eagle-airstrike.replicazeron.json"
+    },
+    {
+      "name": "Eagle Cluster Bomb",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Offensive",
+      "author": "Helldivers 2 community data",
+      "description": "Offensive stratagem. Sends W D S S D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/eagle-cluster-bomb.replicazeron.json"
+    },
+    {
+      "name": "Eagle Gas Strike",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Offensive",
+      "author": "Helldivers 2 community data",
+      "description": "Offensive stratagem. Sends W D A D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/eagle-gas-strike.replicazeron.json"
+    },
+    {
+      "name": "Eagle Napalm Airstrike",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Offensive",
+      "author": "Helldivers 2 community data",
+      "description": "Offensive stratagem. Sends W D S W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/eagle-napalm-airstrike.replicazeron.json"
+    },
+    {
+      "name": "Eagle Smoke Strike",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Offensive",
+      "author": "Helldivers 2 community data",
+      "description": "Offensive stratagem. Sends W D W S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/eagle-smoke-strike.replicazeron.json"
+    },
+    {
+      "name": "Eagle Strafing Run",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Offensive",
+      "author": "Helldivers 2 community data",
+      "description": "Offensive stratagem. Sends W D D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/eagle-strafing-run.replicazeron.json"
+    },
+    {
+      "name": "Orbital 120mm HE Barrage",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Offensive",
+      "author": "Helldivers 2 community data",
+      "description": "Offensive stratagem. Sends D D S A D S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/orbital-120mm-he-barrage.replicazeron.json"
+    },
+    {
+      "name": "Orbital 380mm HE Barrage",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Offensive",
+      "author": "Helldivers 2 community data",
+      "description": "Offensive stratagem. Sends D S W W A S S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/orbital-380mm-he-barrage.replicazeron.json"
+    },
+    {
+      "name": "Orbital Airburst Strike",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Offensive",
+      "author": "Helldivers 2 community data",
+      "description": "Offensive stratagem. Sends D D D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/orbital-airburst-strike.replicazeron.json"
+    },
+    {
+      "name": "Orbital EMS Strike",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Offensive",
+      "author": "Helldivers 2 community data",
+      "description": "Offensive stratagem. Sends D D A S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/orbital-ems-strike.replicazeron.json"
+    },
+    {
+      "name": "Orbital Gas Strike",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Offensive",
+      "author": "Helldivers 2 community data",
+      "description": "Offensive stratagem. Sends D D S D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/orbital-gas-strike.replicazeron.json"
+    },
+    {
+      "name": "Orbital Gatling Barrage",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Offensive",
+      "author": "Helldivers 2 community data",
+      "description": "Offensive stratagem. Sends D S A W W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/orbital-gatling-barrage.replicazeron.json"
+    },
+    {
+      "name": "Orbital Laser",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Offensive",
+      "author": "Helldivers 2 community data",
+      "description": "Offensive stratagem. Sends D S W D S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/orbital-laser.replicazeron.json"
+    },
+    {
+      "name": "Orbital Napalm Barrage",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Offensive",
+      "author": "Helldivers 2 community data",
+      "description": "Offensive stratagem. Sends D D S A D W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/orbital-napalm-barrage.replicazeron.json"
+    },
+    {
+      "name": "Orbital Precision Strike",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Offensive",
+      "author": "Helldivers 2 community data",
+      "description": "Offensive stratagem. Sends D D W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/orbital-precision-strike.replicazeron.json"
+    },
+    {
+      "name": "Orbital Railcannon Strike",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Offensive",
+      "author": "Helldivers 2 community data",
+      "description": "Offensive stratagem. Sends D W S S D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/orbital-railcannon-strike.replicazeron.json"
+    },
+    {
+      "name": "Orbital Smoke Strike",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Offensive",
+      "author": "Helldivers 2 community data",
+      "description": "Offensive stratagem. Sends D D S W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/orbital-smoke-strike.replicazeron.json"
+    },
+    {
+      "name": "Orbital Walking Barrage",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Offensive",
+      "author": "Helldivers 2 community data",
+      "description": "Offensive stratagem. Sends D S D S D S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/orbital-walking-barrage.replicazeron.json"
+    },
+    {
+      "name": "40-K Meltagun",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S A W A A S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/40-k-meltagun.replicazeron.json"
+    },
+    {
+      "name": "AC-8 Autocannon",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S A S W W D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/ac-8-autocannon.replicazeron.json"
+    },
+    {
+      "name": "APW-1 Anti-Materiel Rifle",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S A D W S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/apw-1-anti-materiel-rifle.replicazeron.json"
+    },
+    {
+      "name": "ARC-3 Arc Thrower",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S D S W A A as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/arc-3-arc-thrower.replicazeron.json"
+    },
+    {
+      "name": "AX/AR-23 Guard Dog",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S W A W D S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/ax-ar-23-guard-dog.replicazeron.json"
+    },
+    {
+      "name": "AX/ARC-3 Guard Dog K-9",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S W A W D A as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/ax-arc-3-guard-dog-k-9.replicazeron.json"
+    },
+    {
+      "name": "AX/FLAM-75 Guard Dog Hot Dog",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S W A W A A as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/ax-flam-75-guard-dog-hot-dog.replicazeron.json"
+    },
+    {
+      "name": "AX/LAS-5 Guard Dog Rover",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S W A W D D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/ax-las-5-guard-dog-rover.replicazeron.json"
+    },
+    {
+      "name": "AX/TX-13 Guard Dog Dog Breath",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S W A W D W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/ax-tx-13-guard-dog-dog-breath.replicazeron.json"
+    },
+    {
+      "name": "B-1 Supply Pack",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S A S W W S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/b-1-supply-pack.replicazeron.json"
+    },
+    {
+      "name": "B-100 Portable Hellbomb",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S D W W W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/b-100-portable-hellbomb.replicazeron.json"
+    },
+    {
+      "name": "B-MD C4 Pack",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S D W W D W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/b-md-c4-pack.replicazeron.json"
+    },
+    {
+      "name": "B/FLAM-80 Cremator",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S S D S W W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/b-flam-80-cremator.replicazeron.json"
+    },
+    {
+      "name": "CQC-1 One True Flag",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S A D D W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/cqc-1-one-true-flag.replicazeron.json"
+    },
+    {
+      "name": "CQC-20 Breaching Hammer",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S A D A W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/cqc-20-breaching-hammer.replicazeron.json"
+    },
+    {
+      "name": "CQC-9 Defoliation Tool",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S A D D S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/cqc-9-defoliation-tool.replicazeron.json"
+    },
+    {
+      "name": "EAT-17 Expendable Anti-Tank",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S S A W D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/eat-17-expendable-anti-tank.replicazeron.json"
+    },
+    {
+      "name": "EAT-411 Leveller",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S S A W S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/eat-411-leveller.replicazeron.json"
+    },
+    {
+      "name": "EAT-700 Expendable Napalm",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S S A W A as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/eat-700-expendable-napalm.replicazeron.json"
+    },
+    {
+      "name": "EXO-45 Patriot Exosuit",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends A S D W A S S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/exo-45-patriot-exosuit.replicazeron.json"
+    },
+    {
+      "name": "EXO-49 Emancipator Exosuit",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends A S D W A S W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/exo-49-emancipator-exosuit.replicazeron.json"
+    },
+    {
+      "name": "EXO-51 Lumberer Exosuit",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends A S D W D A W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/exo-51-lumberer-exosuit.replicazeron.json"
+    },
+    {
+      "name": "EXO-55 Breakthrough Exosuit",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends A S D A D S W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/exo-55-breakthrough-exosuit.replicazeron.json"
+    },
+    {
+      "name": "FAF-14 Spear",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S S W S S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/faf-14-spear.replicazeron.json"
+    },
+    {
+      "name": "FLAM-40 Flamethrower",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S A W S W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/flam-40-flamethrower.replicazeron.json"
+    },
+    {
+      "name": "GL-21 Grenade Launcher",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S A W A S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/gl-21-grenade-launcher.replicazeron.json"
+    },
+    {
+      "name": "GL-28 Belt-Fed Grenade Launcher",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S A W A W W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/gl-28-belt-fed-grenade-launcher.replicazeron.json"
+    },
+    {
+      "name": "GL-52 De-Escalator",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S D W A D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/gl-52-de-escalator.replicazeron.json"
+    },
+    {
+      "name": "GR-8 Recoilless Rifle",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S A D D A as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/gr-8-recoilless-rifle.replicazeron.json"
+    },
+    {
+      "name": "Jump Pack",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S W W S W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/jump-pack.replicazeron.json"
+    },
+    {
+      "name": "LAS-98 Laser Cannon",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S A S W A as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/las-98-laser-cannon.replicazeron.json"
+    },
+    {
+      "name": "LAS-99 Quasar Cannon",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S S W A D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/las-99-quasar-cannon.replicazeron.json"
+    },
+    {
+      "name": "LIFT-182 Warp Pack",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S A D S A D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/lift-182-warp-pack.replicazeron.json"
+    },
+    {
+      "name": "LIFT-860 Hover Pack",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S W W S A D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/lift-860-hover-pack.replicazeron.json"
+    },
+    {
+      "name": "M-1000 Maxigun",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S A D S W W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/m-1000-maxigun.replicazeron.json"
+    },
+    {
+      "name": "M-102 Fast Recon Vehicle",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends A S D S D S W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/m-102-fast-recon-vehicle.replicazeron.json"
+    },
+    {
+      "name": "M-103 Supply FRV",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends A S A A S W D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/m-103-supply-frv.replicazeron.json"
+    },
+    {
+      "name": "M-104 Incinerator FRV",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends A S D A S W W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/m-104-incinerator-frv.replicazeron.json"
+    },
+    {
+      "name": "M-105 Stalwart",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S A S W W A as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/m-105-stalwart.replicazeron.json"
+    },
+    {
+      "name": "MG-206 Heavy Machine Gun",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S A W S S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/mg-206-heavy-machine-gun.replicazeron.json"
+    },
+    {
+      "name": "MG-43 Machine Gun",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S A S W D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/mg-43-machine-gun.replicazeron.json"
+    },
+    {
+      "name": "MGX-42 Bullet Storm",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S A S D W A as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/mgx-42-bullet-storm.replicazeron.json"
+    },
+    {
+      "name": "MLS-4X Commando",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S A W S D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/mls-4x-commando.replicazeron.json"
+    },
+    {
+      "name": "MS-11 Solo Silo",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S W D S S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/ms-11-solo-silo.replicazeron.json"
+    },
+    {
+      "name": "PLAS-45 Epoch",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S A W A D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/plas-45-epoch.replicazeron.json"
+    },
+    {
+      "name": "RL-77 Airburst Rocket Launcher",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S W W A D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/rl-77-airburst-rocket-launcher.replicazeron.json"
+    },
+    {
+      "name": "RS-422 Railgun",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S D S W A D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/rs-422-railgun.replicazeron.json"
+    },
+    {
+      "name": "S-11 Speargun",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S D S A W D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/s-11-speargun.replicazeron.json"
+    },
+    {
+      "name": "SH-20 Ballistic Shield Backpack",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S A S S W A as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/sh-20-ballistic-shield-backpack.replicazeron.json"
+    },
+    {
+      "name": "SH-32 Shield Generator Pack",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S W A D A D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/sh-32-shield-generator-pack.replicazeron.json"
+    },
+    {
+      "name": "SH-51 Directional Shield",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S W A D W W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/sh-51-directional-shield.replicazeron.json"
+    },
+    {
+      "name": "StA-X3 W.A.S.P. Launcher",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S S W S D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/sta-x3-w-a-s-p-launcher.replicazeron.json"
+    },
+    {
+      "name": "TD-220 Bastion MK XVI",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends A S D S A S W S W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/td-220-bastion-mk-xvi.replicazeron.json"
+    },
+    {
+      "name": "TX-41 Sterilizer",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Supply",
+      "author": "Helldivers 2 community data",
+      "description": "Supply stratagem. Sends S A W S A as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/tx-41-sterilizer.replicazeron.json"
+    },
+    {
+      "name": "A/AC-8 Autocannon Sentry",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Defense",
+      "author": "Helldivers 2 community data",
+      "description": "Defense stratagem. Sends S W D W A W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/a-ac-8-autocannon-sentry.replicazeron.json"
+    },
+    {
+      "name": "A/ARC-3 Tesla Tower",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Defense",
+      "author": "Helldivers 2 community data",
+      "description": "Defense stratagem. Sends S W D W A D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/a-arc-3-tesla-tower.replicazeron.json"
+    },
+    {
+      "name": "A/FLAM-40 Flame Sentry",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Defense",
+      "author": "Helldivers 2 community data",
+      "description": "Defense stratagem. Sends S W D S W W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/a-flam-40-flame-sentry.replicazeron.json"
+    },
+    {
+      "name": "A/G-16 Gatling Sentry",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Defense",
+      "author": "Helldivers 2 community data",
+      "description": "Defense stratagem. Sends S W D A as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/a-g-16-gatling-sentry.replicazeron.json"
+    },
+    {
+      "name": "A/GM-17 Gas Mortar Sentry",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Defense",
+      "author": "Helldivers 2 community data",
+      "description": "Defense stratagem. Sends S W D S A as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/a-gm-17-gas-mortar-sentry.replicazeron.json"
+    },
+    {
+      "name": "A/LAS-98 Laser Sentry",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Defense",
+      "author": "Helldivers 2 community data",
+      "description": "Defense stratagem. Sends S W D S W D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/a-las-98-laser-sentry.replicazeron.json"
+    },
+    {
+      "name": "A/M-12 Mortar Sentry",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Defense",
+      "author": "Helldivers 2 community data",
+      "description": "Defense stratagem. Sends S W D D S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/a-m-12-mortar-sentry.replicazeron.json"
+    },
+    {
+      "name": "A/M-23 EMS Mortar Sentry",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Defense",
+      "author": "Helldivers 2 community data",
+      "description": "Defense stratagem. Sends S W D S D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/a-m-23-ems-mortar-sentry.replicazeron.json"
+    },
+    {
+      "name": "A/MG-43 Machine Gun Sentry",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Defense",
+      "author": "Helldivers 2 community data",
+      "description": "Defense stratagem. Sends S W D D W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/a-mg-43-machine-gun-sentry.replicazeron.json"
+    },
+    {
+      "name": "AX/MLS-4X Rocket Sentry",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Defense",
+      "author": "Helldivers 2 community data",
+      "description": "Defense stratagem. Sends S W D D A as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/ax-mls-4x-rocket-sentry.replicazeron.json"
+    },
+    {
+      "name": "E/AT-12 Anti-Tank Emplacement",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Defense",
+      "author": "Helldivers 2 community data",
+      "description": "Defense stratagem. Sends S W A D D D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/e-at-12-anti-tank-emplacement.replicazeron.json"
+    },
+    {
+      "name": "E/GL-21 Grenadier Battlement",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Defense",
+      "author": "Helldivers 2 community data",
+      "description": "Defense stratagem. Sends S D S A D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/e-gl-21-grenadier-battlement.replicazeron.json"
+    },
+    {
+      "name": "E/MG-101 HMG Emplacement",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Defense",
+      "author": "Helldivers 2 community data",
+      "description": "Defense stratagem. Sends S W A D D A as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/e-mg-101-hmg-emplacement.replicazeron.json"
+    },
+    {
+      "name": "FX-12 Shield Generator Relay",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Defense",
+      "author": "Helldivers 2 community data",
+      "description": "Defense stratagem. Sends S S A D A D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/fx-12-shield-generator-relay.replicazeron.json"
+    },
+    {
+      "name": "MD-17 Anti-Tank Mines",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Defense",
+      "author": "Helldivers 2 community data",
+      "description": "Defense stratagem. Sends S A W W as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/md-17-anti-tank-mines.replicazeron.json"
+    },
+    {
+      "name": "MD-6 Anti-Personnel Minefield",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Defense",
+      "author": "Helldivers 2 community data",
+      "description": "Defense stratagem. Sends S A W D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/md-6-anti-personnel-minefield.replicazeron.json"
+    },
+    {
+      "name": "MD-8 Gas Mines",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Defense",
+      "author": "Helldivers 2 community data",
+      "description": "Defense stratagem. Sends S A A D as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/md-8-gas-mines.replicazeron.json"
+    },
+    {
+      "name": "MD-I4 Incendiary Mines",
+      "type": "macro",
+      "game": "Helldivers 2",
+      "platform": "PC (arrow keys)",
+      "category": "Defense",
+      "author": "Helldivers 2 community data",
+      "description": "Defense stratagem. Sends S A A S as arrow-key taps with a 50–100 ms randomized delay.",
+      "file": "macros/Helldivers 2/md-i4-incendiary-mines.replicazeron.json"
+    }
+  ]
 }
