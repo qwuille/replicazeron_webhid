@@ -22,14 +22,25 @@ explicitly grant access to the controller and bootloader.
 
 - Reads all supported settings immediately after connecting.
 - Edits ten layout titles and their independent Joystick, WASD, or WASD + Shift
-  modes. The reserved Settings layer cannot be renamed.
+  modes. Compact visual selectors show the current CSS joystick/WASD and OLED
+  designs even while closed; their option panels overlay the page instead of
+  expanding the layout row. The reserved Settings layer cannot be renamed.
 - Exports or imports any playable slot, or the editable Settings keys, as a
-  layout profile. OLED navigation and the layout selector stay protected.
+  layout profile. Preview uses the actual 30-key Replicazeron geometry from
+  Vial, rendered as an image-free CSS device map. A WebHID translation layer
+  turns standard QMK, layer, macro, mouse, lighting, and Replicazeron keycode
+  numbers into readable key names. OLED navigation and the layout selector
+  stay protected.
 - Names all 16 zero-based macro slots and exports or imports each macro as an
   independent profile that can be previewed and installed into any slot.
 - Provides a visual macro editor with physical-key recording, manual key
   actions, editable per-action delays, reordering, and a firmware-side fixed
-  or randomized automatic gap between every key action.
+  or randomized automatic gap between every key action. A clickable miniature
+  CSS keyboard makes familiar letter, number, modifier, and navigation keys
+  quick to add without image assets.
+- Previews contributed and imported macros as a graphical action timeline,
+  including key-down, key-up, tap, text, explicit-delay blocks, and fixed or
+  randomized automatic-delay information.
 - Shows used, free, and total macro-buffer capacity before saving, and rejects
   a sequence that would overflow the controller's EEPROM allocation.
 - Progressively enlarges Layouts and Macros while scrolling slowly through the
@@ -41,8 +52,8 @@ explicitly grant access to the controller and bootloader.
   firmware-update section.
 - Remembers the selected My layouts, Macros, or Contributed tab across page
   reloads in the same browser.
-- Fetches reviewed community keymaps and macros into separate sections from
-  the repository and installs one
+- Fetches reviewed community keymaps and macros into separate, expandable
+  repository-folder trees and installs one
   into a user-selected slot with read-back verification and automatic rollback.
 - Previews keymaps and macro content before writing and accepts local JSON or
   an external/GitHub URL. Contributions are completed inside WebHID: it
@@ -51,6 +62,11 @@ explicitly grant access to the controller and bootloader.
   GitHub authentication currently uses a session-only classic access token
   with `public_repo` scope; the page never stores it.
 - Configures joystick deadzone and axis filtering.
+- Configures the OLED shutdown delay and sleeping-logo interval. These values
+  share unused firmware metadata bits and do not reduce macro capacity.
+- Stores each playable layout's OLED design in unused bits of its existing
+  firmware mode byte. OLED selection and live macro statistics therefore do
+  not consume macro slots or macro-buffer bytes.
 - Selects proportional page scrolling with a temporary cursor toggle,
   middle-drag pan, Shift+middle-drag orbit, or right-drag orbit behavior for the
   Settings-layer thumbstick.

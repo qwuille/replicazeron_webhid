@@ -11,10 +11,10 @@
     "title": { "type": "string", "minLength": 1, "pattern": "^[ -~]+$", "description": "OLED title; WebHID limits the encoded value to 13 printable ASCII bytes." },
     "author": { "type": "string" },
     "game": { "type": "string" },
-    "platform": { "type": "string" },
     "description": { "type": "string" },
     "systemLayer": { "type": "boolean", "description": "True for an exported Settings tool-layer profile." },
     "joystickMode": { "type": "integer", "minimum": 0, "maximum": 2 },
+    "oledDisplay": { "type": "integer", "minimum": 0, "maximum": 4, "description": "Per-layout OLED design: Input, Macro, Game, Combined, or Minimal." },
     "keycodes": {
       "type": "array",
       "minItems": 30,

@@ -7,7 +7,7 @@ Layout-profile keymaps use the standard VIA dynamic-keymap commands on the
 same Raw HID interface: command `0x04` reads one keycode and command `0x05`
 writes one keycode. Their payload is layout, row, column, and a big-endian
 16-bit QMK keycode. The custom `0x70` protocol continues to carry the profile
-title and joystick mode.
+title, joystick mode, and OLED design.
 
 ## Transport and identity
 
@@ -57,10 +57,19 @@ non-responsive or incompatible device.
 | 16 | Configuration heartbeat | Keeps configuration priority active; reply byte 3 is `1` |
 | 17 | Settings-stick mode get | Reply byte 3 contains the Settings-layer scroll/CAD mode |
 | 18 | Settings-stick mode set | Request byte 3 contains the Settings-layer scroll/CAD mode |
+| 19 | Display timers get | Reply byte 3 contains the OLED-off index and byte 4 the sleeping-logo interval index |
+| 20 | Display timers set | Request bytes 3-4 contain the corresponding timer indexes |
+| 21 | Layout OLED design get | Layout 0-9 in byte 2; reply byte 3 contains its design |
+| 22 | Layout OLED design set | Layout 0-9 in byte 2; request byte 3 contains its design |
 
 Joystick mode values are `0 = Joystick`, `1 = WASD`, and
 `2 = WASD + Shift`. Layout 10 is the fixed Settings layer and does not have an
 editable title or joystick mode.
+
+Layout OLED design values are `0 = Input monitor`, `1 = Macro focus`,
+`2 = Game status`, `3 = Combined`, and `4 = Minimal`. They are stored in unused
+bits of the existing per-layout firmware mode bytes and do not reduce Vial's
+macro capacity.
 
 Settings-stick values are `0 = page scroll with a runtime cursor toggle`,
 `1 = middle-button drag`, `2 = Shift + middle-button drag`, and
@@ -133,8 +142,9 @@ operation or a new command marker instead of silently reinterpreting fields.
 ## Layout profile files
 
 Layout profiles are external JSON documents rather than a new firmware storage
-format. Format version 1 contains a title, joystick mode, and 30 row-major QMK
-keycodes for the 6x5 matrix. Array index 26 is `null` because that physical key
+format. Format version 1 contains a title, joystick mode, optional `oledDisplay`
+value, and 30 row-major QMK keycodes for the 6x5 matrix. Profiles created before
+this field default to Input monitor. Array index 26 is `null` because that physical key
 is the firmware-owned layout selector; installation preserves the destination
 slot's existing value at that position.
 

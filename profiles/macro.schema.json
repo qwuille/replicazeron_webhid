@@ -10,7 +10,6 @@
     "name": { "type": "string", "minLength": 1, "pattern": "^[ -~]+$" },
     "author": { "type": "string" },
     "game": { "type": "string" },
-    "platform": { "type": "string" },
     "description": { "type": "string" },
     "autoDelay": {
       "type": "object",

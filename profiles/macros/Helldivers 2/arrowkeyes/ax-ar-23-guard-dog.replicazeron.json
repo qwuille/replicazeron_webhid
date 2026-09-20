@@ -1,0 +1,47 @@
+{
+    "format":  "replicazeron-macro-profile",
+    "version":  1,
+    "name":  "AX/AR-23 Guard Dog",
+    "author":  "Helldivers 2 community data",
+    "game":  "Helldivers 2",
+    "category":  "Supply",
+    "description":  "Supply stratagem: ↓ ↑ ← ↑ → ↓. Sends arrow-key taps; hold or toggle the in-game stratagem menu separately.",
+    "autoDelay":  {
+                      "enabled":  true,
+                      "minimum":  50,
+                      "maximum":  100
+                  },
+    "bytes":  [
+                  "0x01",
+                  "0x01",
+                  "0x51",
+                  "0x01",
+                  "0x01",
+                  "0x52",
+                  "0x01",
+                  "0x01",
+                  "0x50",
+                  "0x01",
+                  "0x01",
+                  "0x52",
+                  "0x01",
+                  "0x01",
+                  "0x4F",
+                  "0x01",
+                  "0x01",
+                  "0x51"
+              ],
+    "sequence":  [
+                     "↓",
+                     "↑",
+                     "←",
+                     "↑",
+                     "→",
+                     "↓"
+                 ],
+    "source":  {
+                   "project":  "Helldivers-2-Stratagem-JSON-Generator",
+                   "version":  "v1.0.9",
+                   "url":  "https://github.com/k33bs/Helldivers-2-Stratagem-JSON-Generator/releases/tag/v1.0.9"
+               }
+}

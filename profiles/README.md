@@ -1,8 +1,9 @@
-# Contributed layout profiles
+# Contributed profiles
 
 The WebHID **Contributed** tab reads [`index.json`](index.json) and previews
 listed layout or macro profiles before installing them into a user-selected
-zero-based slot.
+zero-based slot. The page presents repository paths as expandable folders
+instead of flattening every profile into one list.
 
 To contribute, use the contribution button beside a layout or macro in
 WebHID. Enter the required profile name, author, and description, then
@@ -19,13 +20,20 @@ Catalogue entries use this shape:
   "type": "layout",
   "author": "GitHub username",
   "description": "Short explanation of the mapping.",
-  "file": "community/example-layout.replicazeron.json"
+  "file": "keymaps/community/example-layout.replicazeron.json"
 }
 ```
 
+Layouts live under `keymaps/` and macros under `macros/`. Further directories
+identify a game, control scheme, or community collection. Profiles use standard
+USB HID keycodes on every supported desktop OS, so they are not split into
+Windows and Linux variants unless an actual mapping difference is documented.
+
 Layout profiles must match [`profile.schema.json`](profile.schema.json), and
 macro profiles must match [`macro.schema.json`](macro.schema.json). The layout
-`keycodes` array is row-major for the 6x5 matrix. Position 27 (array index 26)
+`oledDisplay` value optionally selects Input monitor (`0`), Macro focus (`1`),
+Game status (`2`), Combined (`3`), or Minimal (`4`); older profiles without it
+use Input monitor. The `keycodes` array is row-major for the 6x5 matrix. Position 27 (array index 26)
 is the firmware-owned layout selector and must be `null`; WebHID always
 preserves the destination slot's value there.
 
