@@ -3,6 +3,12 @@
 This document describes the compatibility contract used by `index.html`. It is
 not the Vial protocol and is not intended for unrelated QMK devices.
 
+Layout-profile keymaps use the standard VIA dynamic-keymap commands on the
+same Raw HID interface: command `0x04` reads one keycode and command `0x05`
+writes one keycode. Their payload is layout, row, column, and a big-endian
+16-bit QMK keycode. The custom `0x70` protocol continues to carry the profile
+title and joystick mode.
+
 ## Transport and identity
 
 - Runtime USB VID:PID: `4142:2305`
@@ -99,3 +105,15 @@ Firmware and WebHID changes that alter an existing field must be coordinated.
 New fields may use previously unused bytes while retaining old behavior. A
 future incompatible packet layout should introduce an explicit protocol-version
 operation or a new command marker instead of silently reinterpreting fields.
+
+## Layout profile files
+
+Layout profiles are external JSON documents rather than a new firmware storage
+format. Format version 1 contains a title, joystick mode, and 30 row-major QMK
+keycodes for the 6x5 matrix. Array index 26 is `null` because that physical key
+is the firmware-owned layout selector; installation preserves the destination
+slot's existing value at that position.
+
+WebHID snapshots the destination slot before installation, writes and reads
+back all profile fields, and restores the snapshot if installation or
+verification fails. The fixed Settings layer is never a valid destination.

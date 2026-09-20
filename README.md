@@ -23,13 +23,18 @@ the controller and bootloader.
 - Reads all supported settings immediately after connecting.
 - Edits ten layout titles and their independent Joystick, WASD, or WASD + Shift
   modes. The reserved Settings layer cannot be renamed.
+- Exports or imports any playable slot as a layout profile containing its
+  title, joystick mode, and complete keymap.
+- Browses reviewed community profiles from the repository and installs one
+  into a user-selected slot with read-back verification and automatic rollback.
 - Configures joystick deadzone and axis filtering.
 - Selects Firmware or OpenRGB lighting ownership.
 - Configures firmware animation, brightness, speed, hue, and a 1-32 pixel
   addressable-strip length; the default is 11.
 - Assigns sources, brightness, enable state, and active-high/active-low wiring
   for the adjacent left and right side indicators.
-- Imports and exports configuration as JSON.
+- Imports and exports full-device configuration as JSON independently of the
+  per-layout profile files.
 - Validates and installs an STM32F103 `.bin` through WebUSB DFU.
 - Offers standard reset and a PA12 USB reconnect assist for affected Blue Pill
   clones.

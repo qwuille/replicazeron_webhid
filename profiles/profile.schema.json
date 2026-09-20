@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qwuille.github.io/replicazeron_webhid/profiles/profile.schema.json",
+  "title": "Replicazeron layout profile",
+  "type": "object",
+  "required": ["format", "version", "name", "title", "joystickMode", "keycodes"],
+  "properties": {
+    "format": { "const": "replicazeron-layout-profile" },
+    "version": { "const": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "title": { "type": "string", "minLength": 1, "pattern": "^[ -~]+$", "description": "OLED title; WebHID limits the encoded value to 13 printable ASCII bytes." },
+    "author": { "type": "string" },
+    "game": { "type": "string" },
+    "platform": { "type": "string" },
+    "description": { "type": "string" },
+    "joystickMode": { "type": "integer", "minimum": 0, "maximum": 2 },
+    "keycodes": {
+      "type": "array",
+      "minItems": 30,
+      "maxItems": 30,
+      "items": {
+        "oneOf": [
+          { "type": "string", "pattern": "^0x[0-9A-Fa-f]{1,4}$" },
+          { "type": "integer", "minimum": 0, "maximum": 65535 },
+          { "type": "null" }
+        ]
+      }
+    }
+  },
+  "additionalProperties": true
+}
