@@ -75,8 +75,8 @@ editable title or joystick mode.
 
 Source values are `0 = Off`, `1 = Stick strength`, `2 = Buttons held`,
 `3 = Combined activity`, `4 = Always on`, `5 = Caps Lock`, `6 = Num Lock`,
-`7 = Scroll Lock`, `8 = OpenRGB indicator 1`, and
-`9 = OpenRGB indicator 2`.
+and `7 = Scroll Lock`. The side indicators are firmware-controlled GPIO LEDs
+and are not exposed as VialRGB/OpenRGB endpoints.
 
 Both physical indicators are on the assembled controller's right side. The
 left of that pair is firmware LED A/PB13; the right is LED B/PB12.
