@@ -114,8 +114,11 @@ traffic arbitration rather than true host-application detection.
 
 Source values are `0 = Off`, `1 = Stick strength`, `2 = Buttons held`,
 `3 = Combined activity`, `4 = Always on`, `5 = Caps Lock`, `6 = Num Lock`,
-and `7 = Scroll Lock`. The side indicators are firmware-controlled GPIO LEDs
-and are not exposed as VialRGB/OpenRGB endpoints.
+`7 = Scroll Lock`, `8 = OpenRGB traffic`, `9 = Vial/WebHID traffic`, and
+`10 = Host control`. Host control is steady for active OpenRGB frames, blinks
+while Vial/WebHID has configuration priority, and is off when neither is active.
+The side indicators are firmware-controlled GPIO LEDs and are not exposed as
+VialRGB/OpenRGB lighting endpoints.
 
 Both physical indicators are on the assembled controller's right side. The
 left of that pair is firmware LED A/PB13; the right is LED B/PB12.

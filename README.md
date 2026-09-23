@@ -75,6 +75,8 @@ explicitly grant access to the controller and bootloader.
   addressable-strip length; the default is 11.
 - Assigns sources, brightness, enable state, and active-high/active-low wiring
   for the adjacent left and right side indicators.
+- Monitors OpenRGB and Vial/WebHID traffic independently, or combines them as
+  steady OpenRGB and blinking configuration activity with Host control.
 - Imports and exports full-device configuration as JSON independently of the
   per-layout profile files.
 - Validates and installs an STM32F103 `.bin` through WebUSB DFU.
