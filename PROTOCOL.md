@@ -66,6 +66,7 @@ non-responsive or incompatible device.
 | 25 | Analog smoothing set | Request byte 3 contains the corresponding smoothing level |
 | 26 | Faux-analog get | Reply bytes 3-6: Walk key, Run key, Walk threshold, Run threshold |
 | 27 | Faux-analog set | Request bytes 3-6 use the same layout; key value 0 disables that zone |
+| 28 | CAD stick get | Reply contains the live Settings-layer CAD report described below |
 
 Joystick mode values are `0 = DirectInput joystick`, `1 = WASD`, and
 `2 = Faux-analog WASD`; RP2040 additionally uses `3 = XInput + keys`. STM32 exposes
@@ -86,8 +87,8 @@ Operation 23 reply format 2 provides a stable update identity:
 | 7 | Hardware revision minor |
 | 8-9 | Little-endian capability flags |
 
-Capability bit 0 is HID joystick, bit 1 XInput, bit 2 Faux analog, and bit 3
-Settings-layer analog tools. WebHID matches target, variant, and hardware
+Capability bit 0 is HID joystick, bit 1 XInput, bit 2 Faux analog, bit 3
+Settings-layer analog tools, and bit 4 the Fusion/FreeCAD CAD bridge. WebHID matches target, variant, and hardware
 revision against release-manifest version 2. This lets a future hardware
 revision select only its matching firmware instead of relying on a filename.
 Format-1 firmware is treated as hardware revision 1.0 and its historical
@@ -102,11 +103,16 @@ Layout OLED design values are `0 = Input monitor`, `1 = Macro focus`,
 bits of the existing per-layout firmware mode bytes and do not reduce Vial's
 macro capacity.
 
-Settings-stick values are `0 = page scroll with a runtime cursor toggle`,
-`1 = middle-button drag`, `2 = Shift + middle-button drag`, and
-`3 = right-button drag`. Stick strength controls scroll rate or cursor speed.
-The latter three provide common CAD pan/orbit behaviors while the stick is
-displaced.
+Settings-stick values are `0 = page scroll with a runtime cursor toggle` and
+`1 = Fusion/FreeCAD CAD bridge`. Obsolete stored values 2 and 3 fall back to
+mode 0. The bridge does not generate mouse or keyboard reports and does not
+change the permanently firmware-owned Settings five-way.
+
+Operation 28 CAD report format 1 uses byte 3 for the format, byte 4 for the
+active flag, bytes 5-6 for the corrected 0-359 degree angle, bytes 7-8 for
+filtered/smoothed distance, and bytes 9-10 for the configured deadzone. All
+multi-byte fields in this report are big-endian. The active flag is set only
+while Settings L11 and CAD bridge mode are active.
 
 ## Vial/OpenRGB arbitration
 
@@ -115,6 +121,8 @@ traffic. While Vial is reading or changing mappings, or while WebHID maintains
 operation 16 every two seconds, the firmware ignores VialRGB lighting packets
 and sends no reply to them. The last OpenRGB colors remain visible. Lighting
 communication resumes five seconds after configuration traffic stops.
+CAD-stick operation 28 is explicitly excluded from this configuration lock, so
+continuous navigation does not suppress OpenRGB traffic.
 
 The initial Vial identity query remains available so OpenRGB can discover the
 device. Because both applications still share one Raw HID interface, this is

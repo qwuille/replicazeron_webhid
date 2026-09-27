@@ -31,10 +31,8 @@ explicitly grant access to the controller and bootloader.
   expanding the layout row. The reserved Settings layer cannot be renamed.
 - Keeps only the Settings-layer five-way D-pad protected in profile transfers.
   Every other Settings key can carry a modifier, mouse button, shortcut, or
-  ordinary key. Middle-button drag works as pan in Fusion, FreeCAD CAD
-  navigation, and Onshape; a separately mapped Shift key changes it to Fusion
-  orbit, FreeCAD can combine it with mapped left/right mouse buttons, and
-  Onshape can use the right-button-drag stick action for orbit.
+  ordinary key. The five-way remains permanently firmware-owned on Settings
+  and is not reassigned by the CAD bridge.
 - Exports or imports any playable slot, or the editable Settings keys, as a
   layout profile. Preview uses the actual 30-key Replicazeron geometry from
   Vial, rendered as an image-free CSS device map. A WebHID translation layer
@@ -79,8 +77,8 @@ explicitly grant access to the controller and bootloader.
 - Blue Pill Standard intentionally has no USB HID/DirectInput joystick gaming
   mode. It was removed because mixed gamepad and keyboard reports caused
   unsmooth HUD and input-prompt switching in games. Its analog stick remains
-  available to firmware for proportional scrolling, cursor control, and CAD
-  pan/orbit.
+  available to firmware for proportional scrolling, cursor control, and the
+  Fusion/FreeCAD camera bridge.
 - Detects Standard versus DirectInput STM32 firmware, hardware revision, and
   input capabilities. The flasher defaults to the detected update channel and
   provides an explicit toggle to change variants. Standard may receive new
@@ -91,10 +89,9 @@ explicitly grant access to the controller and bootloader.
   firmware mode byte. OLED selection and live macro statistics therefore do
   not consume macro slots or macro-buffer bytes.
 - Selects proportional page scrolling with a temporary cursor toggle,
-  middle-drag pan, Shift+middle-drag orbit, or right-drag orbit behavior for the
-  Settings-layer thumbstick. Firmware v0.3.2 and later suppresses the playable
-  layer's WASD/Faux output while Settings is active, preventing movement letters
-  from triggering CAD commands alongside the selected mouse tool.
+  or the dedicated Fusion/FreeCAD CAD bridge for the Settings-layer thumbstick.
+  The bridge reports filtered analog direction and strength without moving the
+  system pointer or generating mouse-button and keyboard shortcuts.
 - Selects Firmware or OpenRGB lighting ownership.
 - Configures firmware animation, brightness, speed, hue, and a 1-32 pixel
   addressable-strip length; the default is 11.
