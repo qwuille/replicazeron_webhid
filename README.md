@@ -21,12 +21,20 @@ explicitly grant access to the controller and bootloader.
 ## Features
 
 - Reads all supported settings immediately after connecting.
+- Labels the ten playable layers as 1-10 and the fixed Settings tool layer as
+  `Settings L11`; protocol and Vial storage indices remain zero-based.
 - Edits ten layout titles and their independent stick modes. Blue Pill Standard
   offers WASD and Faux-analog WASD; Blue Pill DirectInput additionally offers
   DirectInput joystick. RP2040 offers those modes plus XInput + keys. Compact
   visual selectors show the current CSS joystick/WASD and OLED
   designs even while closed; their option panels overlay the page instead of
   expanding the layout row. The reserved Settings layer cannot be renamed.
+- Keeps only the Settings-layer five-way D-pad protected in profile transfers.
+  Every other Settings key can carry a modifier, mouse button, shortcut, or
+  ordinary key. Middle-button drag works as pan in Fusion, FreeCAD CAD
+  navigation, and Onshape; a separately mapped Shift key changes it to Fusion
+  orbit, FreeCAD can combine it with mapped left/right mouse buttons, and
+  Onshape can use the right-button-drag stick action for orbit.
 - Exports or imports any playable slot, or the editable Settings keys, as a
   layout profile. Preview uses the actual 30-key Replicazeron geometry from
   Vial, rendered as an image-free CSS device map. A WebHID translation layer
