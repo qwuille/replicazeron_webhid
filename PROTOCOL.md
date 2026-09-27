@@ -61,11 +61,41 @@ non-responsive or incompatible device.
 | 20 | Display timers set | Request bytes 3-4 contain the corresponding timer indexes |
 | 21 | Layout OLED design get | Layout 0-9 in byte 2; reply byte 3 contains its design |
 | 22 | Layout OLED design set | Layout 0-9 in byte 2; request byte 3 contains its design |
-| 23 | Device target get | Reply byte 3: `1` = STM32F103, `2` = RP2040; byte 4: reply format version (`1`) |
+| 23 | Device identity get | Reply uses the versioned identity layout below |
+| 24 | Analog smoothing get | Reply byte 3: `0` off, `1` light, `2` balanced, `3` strong, `4` maximum |
+| 25 | Analog smoothing set | Request byte 3 contains the corresponding smoothing level |
+| 26 | Faux-analog get | Reply bytes 3-6: Walk key, Run key, Walk threshold, Run threshold |
+| 27 | Faux-analog set | Request bytes 3-6 use the same layout; key value 0 disables that zone |
 
 Joystick mode values are `0 = Joystick`, `1 = WASD`, and
-`2 = WASD + Shift`. Layout 10 is the fixed Settings layer and does not have an
-editable title or joystick mode.
+`2 = Faux analog`; RP2040 additionally uses `3 = XInput + keys`. STM32 exposes
+only modes 1 and 2 in Standard; its DirectInput compatibility variant also
+exposes mode 0. Standard migrates a previously stored mode 0 to WASD. Layout 10
+is the fixed Settings layer and does not have an editable title or joystick mode.
+
+### Device identity reply
+
+Operation 23 reply format 2 provides a stable update identity:
+
+| Byte | Meaning |
+|---|---|
+| 3 | MCU target: `1` STM32F103, `2` RP2040 |
+| 4 | Identity reply format: `2` |
+| 5 | Variant: `1` STM32 Standard, `2` STM32 DirectInput, `3` RP2040 Full |
+| 6 | Hardware revision major |
+| 7 | Hardware revision minor |
+| 8-9 | Little-endian capability flags |
+
+Capability bit 0 is HID joystick, bit 1 XInput, bit 2 Faux analog, and bit 3
+Settings-layer analog tools. WebHID matches target, variant, and hardware
+revision against release-manifest version 2. This lets a future hardware
+revision select only its matching firmware instead of relying on a filename.
+Format-1 firmware is treated as hardware revision 1.0 and its historical
+target's default variant.
+
+Faux thresholds are percentages from 1 through 99 after the configured
+deadzone. With only Walk enabled the zones are Walk/Pace; with only Run enabled
+they are Pace/Run; with both enabled they are Walk/Pace/Run.
 
 Layout OLED design values are `0 = Input monitor`, `1 = Macro focus`,
 `2 = Game status`, `3 = Combined`, and `4 = Minimal`. They are stored in unused

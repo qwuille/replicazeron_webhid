@@ -21,8 +21,9 @@ explicitly grant access to the controller and bootloader.
 ## Features
 
 - Reads all supported settings immediately after connecting.
-- Edits ten layout titles and their independent Joystick, WASD, or WASD + Shift
-  modes. Compact visual selectors show the current CSS joystick/WASD and OLED
+- Edits ten layout titles and their independent stick modes. Blue Pill offers
+  WASD and Faux analog; RP2040 also offers Joystick and XInput + keys. Compact
+  visual selectors show the current CSS joystick/WASD and OLED
   designs even while closed; their option panels overlay the page instead of
   expanding the layout row. The reserved Settings layer cannot be renamed.
 - Exports or imports any playable slot, or the editable Settings keys, as a
@@ -61,7 +62,20 @@ explicitly grant access to the controller and bootloader.
   branch, updates the catalogue, and opens the pull request automatically.
   GitHub authentication currently uses a session-only classic access token
   with `public_repo` scope; the page never stores it.
-- Configures joystick deadzone and axis filtering.
+- Configures joystick deadzone, directional axis filtering, and persistent
+  analog smoothing from off through maximum.
+- Configures Faux analog Walk and Run keys plus their independent
+  stick-strength transitions. Either binding can be disabled for a two-speed
+  setup; enabling both produces Walk/Pace/Run without a host gamepad.
+- Blue Pill Standard intentionally has no USB HID/DirectInput joystick gaming
+  mode. It was removed because mixed gamepad and keyboard reports caused
+  unsmooth HUD and input-prompt switching in games. Its analog stick remains
+  available to firmware for proportional scrolling, cursor control, and CAD
+  pan/orbit.
+- Detects Standard versus DirectInput STM32 firmware, hardware revision, and
+  input capabilities. The flasher defaults to the detected update channel and
+  provides an explicit toggle to change variants. Standard may receive new
+  features; DirectInput is feature-frozen and receives maintenance fixes only.
 - Configures the OLED shutdown delay and sleeping-logo interval. These values
   share unused firmware metadata bits and do not reduce macro capacity.
 - Stores each playable layout's OLED design in unused bits of its existing
@@ -85,8 +99,9 @@ explicitly grant access to the controller and bootloader.
   The Pages deployment verifies GitHub's reported size and SHA-256 digest before
   publishing the asset beside the site; the browser verifies both again and
   validates its STM32 vector table or RP2040 UF2 structure before enabling the
-  flash action. No local file selection is required, and the verified file can
-  still be downloaded for manual recovery.
+  flash action. Automatic detection and download are the primary path. A small
+  manual-mode switch accepts a previously downloaded matching `.bin` or `.uf2`
+  and links to GitHub Releases for recovery or offline preparation.
 - Offers standard reset and a PA12 USB reconnect assist for affected Blue Pill
   clones.
 
@@ -102,6 +117,7 @@ Replicazeron custom HID protocol in the matching firmware:
 | Raw HID report | 32 bytes |
 | Maintained controllers | STM32F103 Blue Pill-class board and RP2040 |
 | Maintained QMK targets | `handwired/replicazeron/stm32f103:vial`, `handwired/replicazeron/rp2040:vial` |
+| STM32 release variants | Standard and feature-frozen DirectInput compatibility |
 | STM32duino DFU VID:PID | `1EAF:0003` |
 | DFU alternate interface | 2 |
 | Application origin | `0x08002000` |

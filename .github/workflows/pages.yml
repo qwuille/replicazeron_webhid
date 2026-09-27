@@ -46,7 +46,9 @@ jobs:
 
           package_asset() {
             local target="$1"
-            local file="$2"
+            local variant="$2"
+            local hardware_revision="$3"
+            local file="$4"
             local asset url size digest actual_size actual_digest
 
             asset="$(jq -ec --arg file "$file" '.assets[] | select(.name == $file)' <<<"$release_json")"
@@ -64,21 +66,24 @@ jobs:
 
             artifacts="$(jq -c \
               --arg target "$target" \
+              --arg variant "$variant" \
+              --arg hardwareRevision "$hardware_revision" \
               --arg file "$file" \
               --argjson size "$size" \
               --arg sha256 "$digest" \
-              '. + [{target: $target, file: $file, size: $size, sha256: $sha256}]' \
+              '. + [{target: $target, variant: $variant, hardwareRevision: $hardwareRevision, file: $file, size: $size, sha256: $sha256}]' \
               <<<"$artifacts")"
           }
 
-          package_asset stm32 handwired_replicazeron_stm32f103_vial.bin
-          package_asset rp2040 handwired_replicazeron_rp2040_vial.uf2
+          package_asset stm32 standard 1.0 handwired_replicazeron_stm32f103_vial.bin
+          package_asset stm32 directinput 1.0 handwired_replicazeron_stm32f103_directinput_vial.bin
+          package_asset rp2040 full 1.0 handwired_replicazeron_rp2040_vial.uf2
 
           jq -n \
             --arg tag "$tag" \
             --arg releaseUrl "$release_url" \
             --argjson artifacts "$artifacts" \
-            '{format: "replicazeron-release-firmware", version: 1, tag: $tag, releaseUrl: $releaseUrl, artifacts: $artifacts}' \
+            '{format: "replicazeron-release-firmware", version: 2, tag: $tag, releaseUrl: $releaseUrl, artifacts: $artifacts}' \
             > _site/firmware/manifest.json
 
       - name: Upload Pages artifact
