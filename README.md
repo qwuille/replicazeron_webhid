@@ -21,8 +21,9 @@ explicitly grant access to the controller and bootloader.
 ## Features
 
 - Reads all supported settings immediately after connecting.
-- Edits ten layout titles and their independent stick modes. Blue Pill offers
-  WASD and Faux analog; RP2040 also offers Joystick and XInput + keys. Compact
+- Edits ten layout titles and their independent stick modes. Blue Pill Standard
+  offers WASD and Faux-analog WASD; Blue Pill DirectInput additionally offers
+  DirectInput joystick. RP2040 offers those modes plus XInput + keys. Compact
   visual selectors show the current CSS joystick/WASD and OLED
   designs even while closed; their option panels overlay the page instead of
   expanding the layout row. The reserved Settings layer cannot be renamed.

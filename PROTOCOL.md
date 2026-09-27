@@ -67,8 +67,8 @@ non-responsive or incompatible device.
 | 26 | Faux-analog get | Reply bytes 3-6: Walk key, Run key, Walk threshold, Run threshold |
 | 27 | Faux-analog set | Request bytes 3-6 use the same layout; key value 0 disables that zone |
 
-Joystick mode values are `0 = Joystick`, `1 = WASD`, and
-`2 = Faux analog`; RP2040 additionally uses `3 = XInput + keys`. STM32 exposes
+Joystick mode values are `0 = DirectInput joystick`, `1 = WASD`, and
+`2 = Faux-analog WASD`; RP2040 additionally uses `3 = XInput + keys`. STM32 exposes
 only modes 1 and 2 in Standard; its DirectInput compatibility variant also
 exposes mode 0. Standard migrates a previously stored mode 0 to WASD. Layout 10
 is the fixed Settings layer and does not have an editable title or joystick mode.

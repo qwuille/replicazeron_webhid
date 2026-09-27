@@ -13,7 +13,7 @@
     "game": { "type": "string" },
     "description": { "type": "string" },
     "systemLayer": { "type": "boolean", "description": "True for an exported Settings tool-layer profile." },
-    "joystickMode": { "type": "integer", "minimum": 0, "maximum": 3, "description": "0 HID joystick, 1 WASD, 2 configurable Faux analog keyboard mode, 3 RP2040 XInput + keyboard keycodes." },
+    "joystickMode": { "type": "integer", "minimum": 0, "maximum": 3, "description": "0 DirectInput/HID joystick, 1 WASD, 2 configurable Faux-analog WASD, 3 RP2040 XInput + keyboard keycodes." },
     "oledDisplay": { "type": "integer", "minimum": 0, "maximum": 4, "description": "Per-layout OLED design: Input, Macro, Game, Combined, or Minimal." },
     "keycodes": {
       "type": "array",
