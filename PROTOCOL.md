@@ -61,6 +61,7 @@ non-responsive or incompatible device.
 | 20 | Display timers set | Request bytes 3-4 contain the corresponding timer indexes |
 | 21 | Layout OLED design get | Layout 0-9 in byte 2; reply byte 3 contains its design |
 | 22 | Layout OLED design set | Layout 0-9 in byte 2; request byte 3 contains its design |
+| 23 | Device target get | Reply byte 3: `1` = STM32F103, `2` = RP2040; byte 4: reply format version (`1`) |
 
 Joystick mode values are `0 = Joystick`, `1 = WASD`, and
 `2 = WASD + Shift`. Layout 10 is the fixed Settings layer and does not have an
@@ -132,8 +133,11 @@ Operation 12 is accepted only with the guard bytes `44 46 55 21` (ASCII
 - `1`: PA12 USB reconnect assist followed by reset
 
 A successful runtime reply returns `1` in byte 3 before the device disconnects.
-The page then uses WebUSB—not WebHID—to connect to STM32duino DFU device
-`1EAF:0003`, alternate interface 2.
+The page then uses WebUSB—not WebHID—to connect either to STM32duino DFU device
+`1EAF:0003`, alternate interface 2, or the RP2040 ROM PICOBOOT device
+`2E8A:0003`. Operation 23 selects the matching transport and accepted file type.
+Firmware predating operation 23 is treated as the STM32F103 target for backward
+compatibility.
 
 ## Compatibility policy
 

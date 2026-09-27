@@ -4,9 +4,9 @@ A standalone browser configurator and firmware updater for
 [the Replicazeron Vial/QMK firmware](https://github.com/qwuille/vial-qmk/tree/vial).
 
 The application is a self-contained static page. It communicates directly with
-the controller through WebHID and with its STM32duino bootloader through
-WebUSB. Device settings and firmware files are processed locally in the
-browser; this project has no application server or telemetry.
+the controller through WebHID and with the STM32duino or RP2040 ROM bootloader
+through WebUSB. Device settings and firmware files are processed locally in
+the browser; this project has no application server or telemetry.
 
 ## Open the configurator
 
@@ -79,7 +79,8 @@ explicitly grant access to the controller and bootloader.
   steady OpenRGB and blinking configuration activity with Host control.
 - Imports and exports full-device configuration as JSON independently of the
   per-layout profile files.
-- Validates and installs an STM32F103 `.bin` through WebUSB DFU.
+- Detects the connected controller and automatically selects STM32F103 `.bin`
+  WebUSB DFU or RP2040 `.uf2` WebUSB PICOBOOT flashing.
 - Offers standard reset and a PA12 USB reconnect assist for affected Blue Pill
   clones.
 
@@ -93,25 +94,41 @@ Replicazeron custom HID protocol in the matching firmware:
 | Runtime USB VID:PID | `4142:2305` |
 | Raw HID usage page/usage | `FF60:0061` |
 | Raw HID report | 32 bytes |
-| Maintained controller | STM32F103 Blue Pill-class board |
-| Maintained QMK target | `handwired/replicazeron/stm32f103:vial` |
+| Maintained controllers | STM32F103 Blue Pill-class board and RP2040 |
+| Maintained QMK targets | `handwired/replicazeron/stm32f103:vial`, `handwired/replicazeron/rp2040:vial` |
 | STM32duino DFU VID:PID | `1EAF:0003` |
 | DFU alternate interface | 2 |
 | Application origin | `0x08002000` |
+| RP2040 BOOTSEL PICOBOOT VID:PID | `2E8A:0003` |
+
+> [!WARNING]
+> RP2040 support, including XInput and browser flashing, compiles successfully
+> but has not yet been verified on physical hardware. Treat the RP2040 UF2 and
+> updater as experimental, and keep manual BOOTSEL recovery available. The
+> STM32F103 target is the validated release target.
 
 See [PROTOCOL.md](PROTOCOL.md) for the WebHID packet layout and compatibility
 contract.
 
 ## Firmware update safety
 
-Only flash a binary built for the matching STM32F103 Replicazeron target and
-bootloader layout. The page checks file size and the STM32 vector table, but it
-cannot prove that a binary matches your wiring or controller clone.
+Only flash firmware built for the detected Replicazeron target. The page checks
+the STM32 vector table or the RP2040 UF2 family and flash range, but it cannot
+prove that a file matches your wiring or controller clone.
 
 The browser updater requires a compatible STM32duino `boot20` bootloader to be
 installed already. It cannot install or repair the bootloader itself. Initial
 bootloader installation normally requires ST-Link/SWD or another external
 programmer. Keep a command-line DFU or SWD recovery method available.
+
+RP2040 updates use the ROM BOOTSEL PICOBOOT interface, so no separately
+installed bootloader is required. Keep a manual BOOTSEL/mass-storage recovery
+method available.
+
+RP2040 firmware from before the device-target query cannot identify itself to
+the page and is therefore treated as the legacy STM32 target. Install the
+current UF2 once manually with BOOTSEL and the `RPI-RP2` drive. Automatic
+RP2040 selection and browser flashing work after that one-time update.
 
 ## Run locally
 
