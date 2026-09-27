@@ -92,7 +92,9 @@ explicitly grant access to the controller and bootloader.
   not consume macro slots or macro-buffer bytes.
 - Selects proportional page scrolling with a temporary cursor toggle,
   middle-drag pan, Shift+middle-drag orbit, or right-drag orbit behavior for the
-  Settings-layer thumbstick.
+  Settings-layer thumbstick. Firmware v0.3.2 and later suppresses the playable
+  layer's WASD/Faux output while Settings is active, preventing movement letters
+  from triggering CAD commands alongside the selected mouse tool.
 - Selects Firmware or OpenRGB lighting ownership.
 - Configures firmware animation, brightness, speed, hue, and a 1-32 pixel
   addressable-strip length; the default is 11.
