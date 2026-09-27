@@ -81,6 +81,12 @@ explicitly grant access to the controller and bootloader.
   per-layout profile files.
 - Detects the connected controller and automatically selects STM32F103 `.bin`
   WebUSB DFU or RP2040 `.uf2` WebUSB PICOBOOT flashing.
+- Uses the matching asset from the latest `qwuille/vial-qmk` GitHub release.
+  The Pages deployment verifies GitHub's reported size and SHA-256 digest before
+  publishing the asset beside the site; the browser verifies both again and
+  validates its STM32 vector table or RP2040 UF2 structure before enabling the
+  flash action. No local file selection is required, and the verified file can
+  still be downloaded for manual recovery.
 - Offers standard reset and a PA12 USB reconnect assist for affected Blue Pill
   clones.
 
@@ -139,6 +145,13 @@ local to the browser.
 
 No package installation or build step is required. `index.html` contains the
 HTML, CSS, and JavaScript used by the published site.
+
+The GitHub Pages workflow builds the published site without committing firmware
+binaries to this repository. At deployment time it downloads both assets from
+the latest `qwuille/vial-qmk` release, checks their GitHub-provided sizes and
+SHA-256 digests, and generates `firmware/manifest.json`. This same-origin copy
+is necessary because GitHub release-asset redirects are not CORS-readable by a
+static browser application.
 
 ## Future companion overlay
 
