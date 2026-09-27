@@ -158,6 +158,10 @@ HID interface.
 
 ## Credits and scope
 
+The controller preview and `RZ` mark are image-free, code-generated artwork
+created for this WebHID application. The application does not embed third-party
+controller photographs.
+
 The WebHID Control Deck and firmware follow earlier Replicazeron firmware work by
 [9R](https://github.com/9R/qmk_firmware) and
 [Incedius](https://github.com/incedius/vial-qmk), and uses Vial/QMK.
