@@ -3,6 +3,10 @@ name: Deploy WebHID with release firmware
 on:
   push:
     branches: [main]
+  schedule:
+    # Firmware releases live in a separate repository, so periodically rebuild
+    # Pages to mirror the latest published qwuille/vial-qmk release.
+    - cron: '*/10 * * * *'
   workflow_dispatch:
 
 permissions:

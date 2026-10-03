@@ -175,7 +175,10 @@ binaries to this repository. At deployment time it downloads both assets from
 the latest `qwuille/vial-qmk` release, checks their GitHub-provided sizes and
 SHA-256 digests, and generates `firmware/manifest.json`. This same-origin copy
 is necessary because GitHub release-asset redirects are not CORS-readable by a
-static browser application.
+static browser application. Because firmware releases are published from a
+separate repository, the Pages workflow also runs every ten minutes so the
+hosted manifest and firmware automatically follow the latest published
+`qwuille/vial-qmk` release.
 
 ## Future companion overlay
 
