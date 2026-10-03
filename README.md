@@ -21,8 +21,8 @@ explicitly grant access to the controller and bootloader.
 ## Features
 
 - Reads all supported settings immediately after connecting.
-- Labels the ten playable layers as 1-10 and the fixed Settings tool layer as
-  `Settings L11`; protocol and Vial storage indices remain zero-based.
+- Labels the ten playable layers as `Layer 0` through `Layer 9` and the fixed
+  Settings tool layer as `Settings Layer 10`, matching Vial's zero-based indices.
 - Edits ten layout titles and their independent stick modes. Blue Pill Standard
   offers WASD and Faux-analog WASD; Blue Pill DirectInput additionally offers
   DirectInput joystick. RP2040 offers those modes plus XInput + keys. Compact
@@ -110,6 +110,10 @@ explicitly grant access to the controller and bootloader.
   flash action. Automatic detection and download are the primary path. A small
   manual-mode switch accepts a previously downloaded matching `.bin` or `.uf2`
   and links to GitHub Releases for recovery or offline preparation.
+- Shows a centered **Firmware update available** notice only when the connected
+  controller is older than the hosted `vial-qmk` release. Selecting the notice
+  scrolls directly to the firmware-update section; it remains absent when the
+  connected firmware is current.
 - Offers standard reset and a PA12 USB reconnect assist for affected Blue Pill
   clones.
 

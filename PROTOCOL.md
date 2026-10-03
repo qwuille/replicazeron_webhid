@@ -71,26 +71,31 @@ non-responsive or incompatible device.
 Joystick mode values are `0 = DirectInput joystick`, `1 = WASD`, and
 `2 = Faux-analog WASD`; RP2040 additionally uses `3 = XInput + keys`. STM32 exposes
 only modes 1 and 2 in Standard; its DirectInput compatibility variant also
-exposes mode 0. Standard migrates a previously stored mode 0 to WASD. Layout 10
+exposes mode 0. Standard migrates a previously stored mode 0 to WASD. Layer 10
 is the fixed Settings layer and does not have an editable title or joystick mode.
 
 ### Device identity reply
 
-Operation 23 reply format 2 provides a stable update identity:
+Operation 23 reply format 3 provides a stable update identity and running
+firmware version:
 
 | Byte | Meaning |
 |---|---|
 | 3 | MCU target: `1` STM32F103, `2` RP2040 |
-| 4 | Identity reply format: `2` |
+| 4 | Identity reply format: `3` |
 | 5 | Variant: `1` STM32 Standard, `2` STM32 DirectInput, `3` RP2040 Full |
 | 6 | Hardware revision major |
 | 7 | Hardware revision minor |
 | 8-9 | Little-endian capability flags |
+| 10-31 | NUL-padded firmware release string, for example `v0.5.6` |
 
 Capability bit 0 is HID joystick, bit 1 XInput, bit 2 Faux analog, bit 3
 Settings-layer analog tools, and bit 4 the Fusion/FreeCAD CAD bridge. WebHID matches target, variant, and hardware
 revision against release-manifest version 2. This lets a future hardware
 revision select only its matching firmware instead of relying on a filename.
+The page compares the firmware release string with the manifest release tag and
+shows its update notice only when the hosted release is newer. Manifest
+`identityFormat` also lets format-2 devices discover the first format-3 update.
 Format-1 firmware is treated as hardware revision 1.0 and its historical
 target's default variant.
 
@@ -112,7 +117,7 @@ Operation 28 CAD report format 1 uses byte 3 for the format, byte 4 for the
 active flag, bytes 5-6 for the corrected 0-359 degree angle, bytes 7-8 for
 filtered/smoothed distance, and bytes 9-10 for the configured deadzone. All
 multi-byte fields in this report are big-endian. The active flag is set only
-while Settings L11 and CAD bridge mode are active.
+while Settings Layer 10 and CAD bridge mode are active.
 
 ## Vial/OpenRGB arbitration
 

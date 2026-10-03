@@ -6,7 +6,9 @@ on:
   schedule:
     # Firmware releases live in a separate repository, so periodically rebuild
     # Pages to mirror the latest published qwuille/vial-qmk release.
-    - cron: '*/10 * * * *'
+    # Avoid round-minute scheduler congestion; GitHub may delay or drop jobs
+    # queued at the most common cron boundaries.
+    - cron: '7,17,27,37,47,57 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -46,6 +48,11 @@ jobs:
             'https://api.github.com/repos/qwuille/vial-qmk/releases/latest')"
           tag="$(jq -er '.tag_name' <<<"$release_json")"
           release_url="$(jq -er '.html_url' <<<"$release_json")"
+          identity_format=2
+          first_versioned_identity=v0.5.6
+          if [ "$(printf '%s\n' "$first_versioned_identity" "$tag" | sort -V | head -n1)" = "$first_versioned_identity" ]; then
+            identity_format=3
+          fi
           artifacts='[]'
 
           package_asset() {
@@ -86,8 +93,9 @@ jobs:
           jq -n \
             --arg tag "$tag" \
             --arg releaseUrl "$release_url" \
+            --argjson identityFormat "$identity_format" \
             --argjson artifacts "$artifacts" \
-            '{format: "replicazeron-release-firmware", version: 2, tag: $tag, releaseUrl: $releaseUrl, artifacts: $artifacts}' \
+            '{format: "replicazeron-release-firmware", version: 2, tag: $tag, identityFormat: $identityFormat, releaseUrl: $releaseUrl, artifacts: $artifacts}' \
             > _site/firmware/manifest.json
 
       - name: Upload Pages artifact
